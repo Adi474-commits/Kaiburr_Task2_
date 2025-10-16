@@ -184,7 +184,8 @@ kubectl logs <task-exec-pod-name>
 ```powershell
 kubectl describe pod -l app=mongodb
 ```
-<img width="1161" height="393" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (8)" src="https://github.com/user-attachments/assets/52bbbd67-9661-489d-ba45-0ee98cd9ba60" />
+
+<img width="1161" height="256" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (8)" src="https://github.com/user-attachments/assets/4ecf961e-6fd1-468b-9134-fff591bd9270" />
 
 
 #### 9. Task API Pod Environment Variables
@@ -221,6 +222,7 @@ Invoke-RestMethod -Uri "$API_URL/tasks"
 
 
 ---
+
 
 
 
