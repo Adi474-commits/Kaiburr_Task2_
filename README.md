@@ -1,4 +1,4 @@
-# Kaiburr Assessment: # Task 2: Kubernetes Deployment
+<img width="1161" height="259" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (7)" src="https://github.com/user-attachments/assets/87ec3f37-6a7f-423f-b829-1b0843342f43" /><img width="1161" height="283" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (6)" src="https://github.com/user-attachments/assets/aa5d8c2d-c442-441e-a802-ad3e4e3757ad" /># Kaiburr Assessment: # Task 2: Kubernetes Deployment
 
 **Submitted by: Adithya N Reddy**  
 **Program:** B.Tech, Amrita School of Engineering, Bengaluru  
@@ -140,14 +140,16 @@ kubectl get svc
 ```powershell
 kubectl get pv,pvc
 ```
-![Persistent Volume](screenshots/task2/03_persistent_volume.png)
+<img width="1161" height="241" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (2)" src="https://github.com/user-attachments/assets/4c771661-1a1f-4613-9f80-9b515437220a" />
+
 
 #### 4. Application Endpoint Available from Host
 **Shows:** API accessible via curl/Invoke-RestMethod from host machine
 ```powershell
 Invoke-RestMethod -Uri "http://<node-ip>:30080/tasks"
 ```
-![Endpoint Available](screenshots/task2/04_endpoint_from_host.png)
+<img width="1161" height="222" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (3)" src="https://github.com/user-attachments/assets/ceea77d0-8983-4774-be26-73dc8f8f2790" />
+
 
 #### 5. ⭐ Execute Creates Kubernetes Pod (MOST IMPORTANT!)
 **Shows:** PUT /tasks/{id}/execute creating a new pod programmatically
@@ -155,7 +157,9 @@ Invoke-RestMethod -Uri "http://<node-ip>:30080/tasks"
 # Terminal 1: kubectl get pods --watch
 # Terminal 2: Invoke-RestMethod -Method Put -Uri "$API_URL/tasks/$taskId/execute"
 ```
-![Execute Creates Pod](screenshots/task2/05_execute_creates_pod.png)
+<img width="1161" height="288" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (4)" src="https://github.com/user-attachments/assets/f3a304ed-fcb2-4a49-a4ad-ea98576486c1" />
+
+<img width="1161" height="292" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (5)" src="https://github.com/user-attachments/assets/406e4f6f-1a5d-4106-bad1-9f6ea0705a8d" />
 
 **This screenshot proves the key requirement: commands run in Kubernetes pods, not locally!**
 
@@ -164,35 +168,40 @@ Invoke-RestMethod -Uri "http://<node-ip>:30080/tasks"
 ```powershell
 kubectl describe pod <task-exec-pod-name>
 ```
-![Busybox Execution Pod](screenshots/task2/06_busybox_pod.png)
+<img width="1161" height="283" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (6)" src="https://github.com/user-attachments/assets/2822b21b-61cc-4cee-9482-76ac74226ba7" />
+
 
 #### 7. Execution Pod Logs (Command Output)
 **Shows:** Logs from execution pod containing command output
 ```powershell
 kubectl logs <task-exec-pod-name>
 ```
-![Execution Pod Logs](screenshots/task2/07_execution_logs.png)
+<img width="1161" height="259" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (7)" src="https://github.com/user-attachments/assets/4bffb6f5-59e2-4854-beaf-a150b7612526" />
+
 
 #### 8. MongoDB Pod Environment Variables
 **Shows:** MongoDB pod takes configuration from environment
 ```powershell
 kubectl describe pod -l app=mongodb
 ```
-![MongoDB Environment](screenshots/task2/08_mongodb_env.png)
+<img width="1161" height="393" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (8)" src="https://github.com/user-attachments/assets/52bbbd67-9661-489d-ba45-0ee98cd9ba60" />
+
 
 #### 9. Task API Pod Environment Variables
 **Shows:** App reads MONGO_HOST, MONGO_PORT from environment
 ```powershell
 kubectl describe pod -l app=task-api
 ```
-![Task API Environment](screenshots/task2/09_task_api_env.png)
+<img width="1161" height="257" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (9)" src="https://github.com/user-attachments/assets/05fbc5e3-e24d-4f99-924c-b7a08cae299b" />
+
 
 #### 10. Task Execution History in Database
 **Shows:** TaskExecution saved in MongoDB with output, times, exit code
 ```powershell
 Invoke-RestMethod -Uri "$API_URL/tasks/$taskId"
 ```
-![Execution History](screenshots/task2/10_execution_history.png)
+<img width="1161" height="334" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (10)" src="https://github.com/user-attachments/assets/3ab9642e-5de2-4500-8b8d-9c987e492497" />
+
 
 #### 11. Data Persists After MongoDB Pod Deletion
 **Shows:** Delete MongoDB pod → new pod starts → data still exists
@@ -201,12 +210,18 @@ kubectl delete pod -l app=mongodb
 # Wait for new pod
 Invoke-RestMethod -Uri "$API_URL/tasks"
 ```
-![Data Persistence](screenshots/task2/11_data_persistence.png)
+<img width="703" height="379" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (11)" src="https://github.com/user-attachments/assets/c282fbc4-21d7-4945-bd8a-fe9b9ab747e3" />
+
+<img width="654" height="376" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (12)" src="https://github.com/user-attachments/assets/503b666c-bfd4-4c65-914f-cb2361685916" />
+
+
+
 
 
 
 
 ---
+
 
 
 
