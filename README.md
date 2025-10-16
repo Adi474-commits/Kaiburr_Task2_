@@ -1,4 +1,4 @@
-<img width="1161" height="259" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (7)" src="https://github.com/user-attachments/assets/87ec3f37-6a7f-423f-b829-1b0843342f43" /><img width="1161" height="283" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (6)" src="https://github.com/user-attachments/assets/aa5d8c2d-c442-441e-a802-ad3e4e3757ad" /># Kaiburr Assessment: # Task 2: Kubernetes Deployment
+># Kaiburr Assessment: # Task 2: Kubernetes Deployment
 
 **Submitted by: Adithya N Reddy**  
 **Program:** B.Tech, Amrita School of Engineering, Bengaluru  
@@ -221,6 +221,7 @@ Invoke-RestMethod -Uri "$API_URL/tasks"
 
 
 ---
+
 
 
 
