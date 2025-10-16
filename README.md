@@ -81,9 +81,6 @@ Invoke-RestMethod -Method Put -Uri "$API_URL/tasks" `
 
 ## Documentation
 
-📖 **Complete Task 2 documentation**: [TASK2_README.md](TASK2_README.md)  
-📖 **Testing guide with screenshots**: [TASK2_TESTING_GUIDE.md](TASK2_TESTING_GUIDE.md)
-
 ### Key Files
 
 | File | Purpose |
@@ -204,31 +201,6 @@ Invoke-RestMethod -Uri "$API_URL/tasks"
 ```
 ![Data Persistence](screenshots/task2/11_data_persistence.png)
 
-#### 12. RBAC Configuration
-**Shows:** ServiceAccount with pod creation permissions
-```powershell
-kubectl describe role task-api-role
-kubectl describe rolebinding task-api-rolebinding
-```
-![RBAC](screenshots/task2/12_rbac.png)
-
----
-
-### How to Generate These Screenshots
-
-Run the automated screenshot demo script:
-
-```powershell
-# Get your API URL first
-$API_URL = minikube service task-api-service --url
-
-# Run the demo script (pauses at each step for screenshots)
-.\take-screenshots.ps1 -ApiUrl $API_URL
-```
-
-Or see detailed manual instructions: [screenshots/TASK2_SCREENSHOT_REQUIREMENTS.md](screenshots/TASK2_SCREENSHOT_REQUIREMENTS.md)
-
----
 
 ## Project Summary
 
@@ -246,5 +218,6 @@ This project demonstrates:
 - ✅ Production-ready manifests with health checks
 
 ---
+
 
 
