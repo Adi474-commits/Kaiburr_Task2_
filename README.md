@@ -16,13 +16,13 @@ Task 2 extends Task 1 by deploying the application to Kubernetes with the follow
 
 ### Key Features
 
-✅ **Pod-Based Execution**: Commands execute in ephemeral Kubernetes pods (busybox image)  
-✅ **Kubernetes Client**: Uses Fabric8 Kubernetes Java client v6.9.2  
-✅ **Containerized App**: Spring Boot runs in Docker container  
-✅ **MongoDB on K8s**: Deployed with PersistentVolume for data persistence  
-✅ **RBAC**: ServiceAccount with pod creation/deletion permissions  
-✅ **Environment Config**: MongoDB connection via env variables  
-✅ **Auto Cleanup**: Execution pods deleted after command completion  
+1) **Pod-Based Execution**: Commands execute in ephemeral Kubernetes pods (busybox image)  
+2) **Kubernetes Client**: Uses Fabric8 Kubernetes Java client v6.9.2  
+3) **Containerized App**: Spring Boot runs in Docker container  
+4) **MongoDB on K8s**: Deployed with PersistentVolume for data persistence  
+5) **RBAC**: ServiceAccount with pod creation/deletion permissions  
+6) **Environment Config**: MongoDB connection via env variables  
+7) **Auto Cleanup**: Execution pods deleted after command completion  
 
 ### Architecture
 
@@ -124,14 +124,16 @@ Invoke-RestMethod -Method Put -Uri "$API_URL/tasks/$($task.id)/execute"
 ```powershell
 kubectl get pods -o wide
 ```
-![Pods Running](screenshots/task2/01_pods_running.png)
+<img width="1161" height="393" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com" src="https://github.com/user-attachments/assets/278fd747-c169-4c52-84c9-9f46b7111a25" />
 
 #### 2. Services Exposed (NodePort)
 **Shows:** NodePort service exposing API on port 30080
 ```powershell
 kubectl get svc
 ```
-![Services](screenshots/task2/02_services.png)
+<img width="1161" height="393" alt="ADITHYA REDDY 16102025 adithyasnr@gmail com (1)" src="https://github.com/user-attachments/assets/45acabef-1a53-4f79-ab51-e38cd50781ea" />
+
+
 
 #### 3. Persistent Volume for MongoDB
 **Shows:** PV and PVC bound for MongoDB data persistence
@@ -202,22 +204,10 @@ Invoke-RestMethod -Uri "$API_URL/tasks"
 ![Data Persistence](screenshots/task2/11_data_persistence.png)
 
 
-## Project Summary
 
-This project demonstrates:
-
-- ✅ RESTful API design with Spring Boot
-- ✅ MongoDB integration with Spring Data
-- ✅ Command validation and security
-- ✅ Dockerization with multi-stage builds
-- ✅ Kubernetes deployment and orchestration
-- ✅ Dynamic pod creation using Kubernetes API
-- ✅ Persistent storage with PersistentVolumes
-- ✅ RBAC for secure Kubernetes access
-- ✅ Environment-based configuration
-- ✅ Production-ready manifests with health checks
 
 ---
+
 
 
 
